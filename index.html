@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <video class="background_video" autoplay loop muted plays-inline >
+        <source class="background_video_src" src="videos/default.mp4" type="video/mp4">
+    </video>
+
+  
+
+    <nav>
+        <div >
+            <input class="search_input" type="text" placeholder="Enter city name" autocomplete="on" >
+            <button type="submit" class="search_btn" >Search</button>
+            <h1 class="time"></h1>
+        </div>
+    </nav>
+    <div class="current_temp_data_container">
+        <img class="c_sign" src="./pictures/celsius.png" alt="">
+
+        <div class="current_temp_div">
+            <h1 class="city_name"></h1>
+            <div class="temp_and_sign">
+                <h1 class="temp" ></h1>
+                
+            </div>
+           
+            <!-- <div class="f_and_c_btn_div">
+
+                <button class="fahrenheit_btn">F</button>
+                <button class="celsius_btn">C</button>
+            </div> -->
+            <div class="lds_roller">Loading<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+            <h1 class="description" ></h1>
+            <img class="sky_img"  src="" alt="" srcset="">
+            
+        </div>
+        <div class="current_data_div">
+            <div class="high_and_low_temp_div">
+                <div>
+                    <img class="high_and_low_temp_icon" src="pictures/temperature.png" alt="" srcset="">
+                    <h1 class="higher_temp"></h1>
+                </div>
+                <div>
+                    <img class="high_and_low_temp_icon" src="pictures/temperature.png" alt="" srcset="">
+                    <h1 class="lower_temp"></h1>
+                </div>
+            </div>
+
+            <div class="high_and_low_temp_div">
+                <div>
+                    <img class="wind_icon" src="pictures/wind.png" alt="" srcset="">
+                    <h1 class="wind"></h1>
+                </div>
+                <div>
+                    <img class="humidity_icon" src="pictures/humidity.png" alt="" srcset="">
+                    <h1 class="humidity"></h1>
+                </div>
+            </div>
+
+            <div class="high_and_low_temp_div">
+                <div>
+                    <img class="season_icon" src="pictures/season.png" alt="" srcset="">
+                   
+                    <h1 class="season"></h1>
+                </div>
+                <div>
+                    <img class="visibility_icon" src="pictures/visibility.png" alt="" srcset="">
+                    <h1 class="visibility"></h1>
+                </div>
+             
+            </div>
+           
+        </div>
+        
+      
+
+    </div>
+
+    
+    <script src="index.js"></script>
+</body>
+</html>

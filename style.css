@@ -1,0 +1,230 @@
+:root{
+  --icon__size: 4rem
+ 
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+   
+}
+
+
+
+/* nav bar start */
+
+nav{
+    border-radius: 0rem;   
+    background-image: linear-gradient(rgba(26, 167, 255, 0.524), rgba(10, 64, 243, 0.746));
+   height: 2rem;
+   display: flex;
+   padding: 1rem;
+   justify-content: center;
+   box-shadow: 0px 0px 50px;
+}
+
+.search_input , .search_btn{
+    font-size: large;
+    border-radius: .5rem;
+   padding: 0.1rem 1rem 0.1rem 1rem;
+   border: 0px;
+  
+}
+
+.time{
+    display: inline-flex;
+}
+
+/* nav bar end */
+
+
+/* Loading animaton start */
+
+.lds_roller {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds_roller div {
+    animation: lds_roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    transform-origin: 40px 40px;
+  }
+  .lds_roller div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #2b00ff;
+    margin: -4px 0 0 -4px;
+  }
+  .lds_roller div:nth-child(1) {
+    animation-delay: -0.036s;
+  }
+  .lds_roller div:nth-child(1):after {
+    top: 63px;
+    left: 63px;
+  }
+  .lds_roller div:nth-child(2) {
+    animation-delay: -0.072s;
+  }
+  .lds_roller div:nth-child(2):after {
+    top: 68px;
+    left: 56px;
+  }
+  .lds_roller div:nth-child(3) {
+    animation-delay: -0.108s;
+  }
+  .lds_roller div:nth-child(3):after {
+    top: 71px;
+    left: 48px;
+  }
+  .lds_roller div:nth-child(4) {
+    animation-delay: -0.144s;
+  }
+  .lds_roller div:nth-child(4):after {
+    top: 72px;
+    left: 40px;
+  }
+  .lds_roller div:nth-child(5) {
+    animation-delay: -0.18s;
+  }
+  .lds_roller div:nth-child(5):after {
+    top: 71px;
+    left: 32px;
+  }
+  .lds_roller div:nth-child(6) {
+    animation-delay: -0.216s;
+  }
+  .lds_roller div:nth-child(6):after {
+    top: 68px;
+    left: 24px;
+  }
+  .lds_roller div:nth-child(7) {
+    animation-delay: -0.252s;
+  }
+  .lds_roller div:nth-child(7):after {
+    top: 63px;
+    left: 17px;
+  }
+  .lds_roller div:nth-child(8) {
+    animation-delay: -0.288s;
+  }
+  .lds_roller div:nth-child(8):after {
+    top: 56px;
+    left: 12px;
+  }
+  @keyframes lds_roller {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Loading animaton end */
+
+
+
+  /* current_temp_data_container start */
+
+  .current_temp_data_container{
+    
+    display: flex;
+    justify-content: center;
+    height: 22.7rem;
+    box-shadow: 0px 0px 50px;
+    border-radius: 1rem;
+  width: 80%;
+  margin: auto;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: #2596ffb0;
+
+
+}
+
+.temp_and_sign{
+    display: flex
+}
+
+.temp{
+    font-size: 6rem;
+}
+.current_temp_div{
+
+    width: 24rem;
+    display: flex;
+   position: relative;
+    font-size: 1.7rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+  
+}
+
+.current_data_div{
+
+    width: 63%;
+    display: none;
+    position: relative;
+
+
+   
+}
+
+.f_and_c_btn_div *{
+
+    font-size: 3rem;
+}
+
+.high_and_low_temp_div{
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-evenly;
+   
+
+}
+
+.sky_img{
+  width: 8rem;
+}
+
+.high_and_low_temp_icon, .wind_icon, .humidity_icon, .season_icon, .visibility_icon{
+  width: var(--icon__size);
+
+}
+
+.c_sign{
+
+  width: 3rem;
+  height: 3rem;
+  display: none;
+ 
+}
+
+.background_video{
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.background_video_src{
+
+}
+
+
