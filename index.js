@@ -68,7 +68,7 @@ function fetch_data(unit){
                 visibility.innerHTML = "Visibility: " + data.visibility + " meter"
                 season.innerHTML = "Description: " + data.weather[0].description
                
-              data.weather[0].icon = "12d"  
+            
                  
                 if(data.weather[0].icon == "01n"){
                     background_video.src = "videos/clear_sky_night_01n.mp4"
