@@ -35,6 +35,7 @@ nav{
 
 .time{
     display: inline-flex;
+    color: white;
 }
 .time_div{
   width: 260px;
