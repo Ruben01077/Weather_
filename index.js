@@ -30,6 +30,7 @@ let unit = "metric"
 
 
 // < get user location 
+ function get_user_location(){
 const successCallback = (position) => {
     console.log(position.coords);
     current_lat = position.coords.latitude
@@ -41,6 +42,10 @@ const errorCallback = (error) => {
 };
 
 navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+}
+
+get_user_location()
+
 // get user location >
 
 
@@ -50,7 +55,25 @@ function fetch_data(unit){
         let api_url_with_lan_long = "https://api.openweathermap.org/data/2.5/weather?lat="+current_lat+"&lon="+current_long+"&appid=d71a7f93bbef11f3502e1050c73c7deb&units="+unit+""
         let getLocationInfoByLatLong = "https://api.bigdatacloud.net/data/reverse-geocode-client?latitude="+current_lat+"&longitude=-"+current_long+"&localityLanguage=en"
         
-    
+    function fetch_current_city_name(){
+
+        return new Promise((resolve, reject)=>{
+            fetch(getLocationInfoByLatLong)
+            .then((response) => response.json())
+            .then((data)=>{
+                console.log(data)
+                city_name.innerHTML = data.city
+
+            })
+
+            
+        })
+
+    }
+
+    fetch_current_city_name()
+
+
         fetch(api_url_with_lan_long)
             .then((response) => response.json())
             .then((data)=>{
@@ -106,30 +129,10 @@ function fetch_data(unit){
                     background_video.src = "videos/default.mp4"
                    }
 
-               console.log(data.weather[0].icon)
+               
             })
 
 
-
-        fetch(getLocationInfoByLatLong)
-            .then((response) => response.json())
-            .then((data)=>{
-                console.log(data)
-                city_name.innerHTML = data.city
-
-            })
-
-        fetch(api_url_with_lan_long+"&mode=xml")
-            .then(response => response.text())
-            .then(data => {
-              const parser = new DOMParser();
-              const xml = parser.parseFromString(data, "application/xml");
-              console.log(xml);
-              let sunset = xml.querySelector("sun").getAttribute("set")
-              let sunrise = xml.querySelector("sun").getAttribute("rise")
-              console.log(sunrise)
-            })
-            .catch(console.error);
 
     }, 5000)
 
@@ -202,14 +205,18 @@ function search_by_city(unit){
                     background_video.src = "videos/default.mp4"
                    }
     
-                   console.log(data.weather[0].icon)
+
+                   var today = new Date();  
+                   var localoffset = -(today.data.timezone/60);
+                   var destoffset = -4;
+                   
+                   var offset = destoffset-localoffset;
+                   var d = new Date( new Date().getTime() + offset * 3600 * 1000)
+                   alert(d);
 
             })
 
 
-
-          
-            
 
         }
              
@@ -228,9 +235,13 @@ function search_by_city(unit){
 
 // < get user date and time
 function getData(){
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
     date = new Date();
-    current_date = (date.getMonth()+1)+"-"+ date.getDate() + "-"+ date.getFullYear();
+    current_date = months[date.getMonth()]+"/"+ date.getDate() + "/"+ date.getFullYear();
+    
     current_time = date.getHours()+":"+date.getMinutes() + ":"+ date.getSeconds();
+
     time.innerHTML = current_date + " " +  current_time
 }
 
@@ -242,14 +253,6 @@ setInterval(getData, 1000)
 
 
 
-// search_btn.addEventListener('clicked', (event) => {
-//     if (event.key === 'clicked') {
-//         console.log('Clickesd');
-//         // Perform desired actions here
-
-        
-//     }
-//     });
 
 
 
