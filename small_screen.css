@@ -1,0 +1,22 @@
+@media only screen and (max-width: 700px) {
+   
+    nav{
+        height: 3.5rem;
+    }
+
+    .search_input , .search_btn{
+        font-size: 19px;
+        border-radius: .5rem;
+       padding: 0.1rem 1rem 0.1rem 1rem;
+       border: 0px;
+      height: 2rem;
+    }
+
+    .time{
+        padding: 5px 0px 5px 0px;
+        color: white;
+    }
+
+   
+
+}

@@ -16,25 +16,32 @@
 nav{
     border-radius: 0rem;   
     background-image: linear-gradient(rgba(26, 167, 255, 0.524), rgba(10, 64, 243, 0.746));
-   height: 2rem;
+   height: 2.5rem;
    display: flex;
+   flex-wrap: wrap;
    padding: 1rem;
-   justify-content: center;
+   justify-content: space-around;
    box-shadow: 0px 0px 50px;
+   align-items: center;
 }
 
 .search_input , .search_btn{
-    font-size: large;
+    font-size: 25px;
     border-radius: .5rem;
    padding: 0.1rem 1rem 0.1rem 1rem;
    border: 0px;
-  
+  height: 2.2rem;
 }
 
 .time{
     display: inline-flex;
 }
-
+.time_div{
+  width: 260px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
 /* nav bar end */
 
 
@@ -198,7 +205,7 @@ nav{
   width: 310px;
   padding: 10px;
   border-bottom: 1px solid;
-  box-shadow: 0px 0px 0px yellow;
+ 
 }
 
 .sky_img{
