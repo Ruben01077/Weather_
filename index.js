@@ -240,7 +240,7 @@ function getData(){
     date = new Date();
     current_date = months[date.getMonth()]+"/"+ date.getDate() + "/"+ date.getFullYear();
     
-    current_time = date.getHours()+":"+date.getMinutes() + ":"+ date.getSeconds();
+    current_time = date.getHours()+":"+date.getMinutes();
 
     time.innerHTML = current_date + " " +  current_time
 }

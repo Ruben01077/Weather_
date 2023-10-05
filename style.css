@@ -33,6 +33,12 @@ nav{
   height: 2.2rem;
 }
 
+.search_btn{
+color: white;
+  background-color: #2596ff7e;
+  height: 2.4rem
+}
+
 .time{
     display: inline-flex;
     color: white;
