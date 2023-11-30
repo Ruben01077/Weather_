@@ -55,6 +55,17 @@ function fetch_data(unit){
         let api_url_with_lan_long = "https://api.openweathermap.org/data/2.5/weather?lat="+current_lat+"&lon="+current_long+"&appid=d71a7f93bbef11f3502e1050c73c7deb&units="+unit+""
         let getLocationInfoByLatLong = "https://api.bigdatacloud.net/data/reverse-geocode-client?latitude="+current_lat+"&longitude=-"+current_long+"&localityLanguage=en"
         
+         //let new_api = "https://api-bdc.net/data/reverse-geocode-with-timezone?latitude="+current_lat+"&longitude="+current_long+"&localityLanguage=en&key=bdc_9c27d604fb2844248be7990ee7a365a9"
+
+
+        // fetch(new_api)
+        // .then((response) => response.json())
+        // .then((data)=>{
+        //   console.log(data)
+        // })
+
+
+
     function fetch_current_city_name(){
 
         return new Promise((resolve, reject)=>{
@@ -206,13 +217,7 @@ function search_by_city(unit){
                    }
     
 
-                   var today = new Date();  
-                   var localoffset = -(today.data.timezone/60);
-                   var destoffset = -4;
-                   
-                   var offset = destoffset-localoffset;
-                   var d = new Date( new Date().getTime() + offset * 3600 * 1000)
-                   alert(d);
+                 
 
             })
 
@@ -241,6 +246,7 @@ function getData(){
     current_date = months[date.getMonth()]+"/"+ date.getDate() + "/"+ date.getFullYear();
     
     current_time = date.getHours()+":"+date.getMinutes();
+    
 
     time.innerHTML = current_date + " " +  current_time
 }
